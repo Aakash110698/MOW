@@ -1,6 +1,7 @@
 package com.snackhoop.mealsonwheels.view.activity;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,6 +19,8 @@ import com.snackhoop.mealsonwheels.view.iview.ILogInView;
  */
 
 public class LoginActivity extends BaseActivity<ILogInPresenter> implements ILogInView,FirebaseAuth.AuthStateListener{
+
+    FirebaseAuth mAuth;
     @NonNull
     @Override
     ILogInPresenter bindView(@Nullable Bundle savedInstanceState) {
@@ -30,6 +33,8 @@ public class LoginActivity extends BaseActivity<ILogInPresenter> implements ILog
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bindView(savedInstanceState);
+        mAuth =FirebaseAuth.getInstance();
+        mAuth.addAuthStateListener(this);
         if (savedInstanceState==null){
             android.support.v4.app.FragmentTransaction transaction =getSupportFragmentManager().beginTransaction();
             transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
@@ -45,7 +50,7 @@ public class LoginActivity extends BaseActivity<ILogInPresenter> implements ILog
     @Override
     public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
         if(firebaseAuth!=null){
-            //TODO: Goto main activty
+            startActivity(new Intent(getActivity(), MainActivity.class));
 
         }
     }

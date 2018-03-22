@@ -1,6 +1,7 @@
 package com.snackhoop.mealsonwheels.view.fragment;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -33,6 +34,7 @@ import com.snackhoop.mealsonwheels.R;
 import com.snackhoop.mealsonwheels.library.Log;
 import com.snackhoop.mealsonwheels.model.UserDetails;
 import com.snackhoop.mealsonwheels.view.activity.LoginActivity;
+import com.snackhoop.mealsonwheels.view.activity.MainActivity;
 
 import java.util.concurrent.TimeUnit;
 
@@ -199,6 +201,7 @@ public class SignUpFragment extends Fragment {
                     transaction.addToBackStack(null);
                     transaction.add(R.id.login_container,new SignInFragment()).commit();
                     progressDialog.dismiss();;
+                    startActivity(new Intent(getActivity(), MainActivity.class));
 
                 }
                 else {
