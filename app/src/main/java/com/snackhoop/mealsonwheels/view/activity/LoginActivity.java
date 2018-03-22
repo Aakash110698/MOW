@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.snackhoop.mealsonwheels.R;
 import com.snackhoop.mealsonwheels.presenter.LogInPresenter;
 import com.snackhoop.mealsonwheels.presenter.ipresenter.ILogInPresenter;
@@ -16,7 +17,7 @@ import com.snackhoop.mealsonwheels.view.iview.ILogInView;
  * Created by malavan on 22/03/18.
  */
 
-public class LoginActivity extends BaseActivity<ILogInPresenter> implements ILogInView{
+public class LoginActivity extends BaseActivity<ILogInPresenter> implements ILogInView,FirebaseAuth.AuthStateListener{
     @NonNull
     @Override
     ILogInPresenter bindView(@Nullable Bundle savedInstanceState) {
@@ -41,4 +42,11 @@ public class LoginActivity extends BaseActivity<ILogInPresenter> implements ILog
 
     }
 
+    @Override
+    public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+        if(firebaseAuth!=null){
+            //TODO: Goto main activty
+
+        }
+    }
 }

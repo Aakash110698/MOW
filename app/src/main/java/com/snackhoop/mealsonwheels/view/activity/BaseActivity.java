@@ -229,7 +229,6 @@ abstract class BaseActivity<T extends IBasePresenter> extends AppCompatActivity 
     public void hideStatusBar() {
 
     }
-
     @Override
     public void showAlert(String title, String message) {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
