@@ -1,5 +1,6 @@
 package com.snackhoop.mealsonwheels.adapter.viewholder;
 
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.TextView;
 
@@ -26,6 +27,8 @@ public class RestuarentViewHolder extends BaseViewHolder<RestuarentDetails> impl
     TextView textView_restaurent_name;
     @BindView(R.id.textview_desc)
     TextView textView_desc;
+    @BindView(R.id.card_restaurent)
+    CardView cardView;
 
 
     List<RestuarentDetails> restuarentDetails;
@@ -37,17 +40,20 @@ public class RestuarentViewHolder extends BaseViewHolder<RestuarentDetails> impl
         this.restuarentDetails = restuarentDetails;
         this.listener = listener;
         this.view = itemView;
+
         variableInitalization();
 
     }
 
     private void variableInitalization() {
-        ButterKnife.bind(this,view);
+
+        ButterKnife.bind(this,view);cardView.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+
             case R.id.card_restaurent:
                 listener.onItemClicked(restuarentDetails.get(getAdapterPosition()),getAdapterPosition());
                 break;

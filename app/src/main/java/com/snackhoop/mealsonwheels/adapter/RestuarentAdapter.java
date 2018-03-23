@@ -29,7 +29,7 @@ public class RestuarentAdapter extends BaseRecyclerAdapter<RestuarentDetails,Res
 
     @Override
     public RestuarentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_restuarent_card, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_food_menu, parent, false);
 
         return new RestuarentViewHolder(itemView,list,iRestuarentListener);
     }

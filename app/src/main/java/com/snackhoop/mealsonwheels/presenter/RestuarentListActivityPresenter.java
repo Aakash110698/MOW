@@ -1,6 +1,7 @@
 package com.snackhoop.mealsonwheels.presenter;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
@@ -36,10 +37,13 @@ public class RestuarentListActivityPresenter extends BasePresenter<IRestuarentLi
         @Override
         public void onItemClicked(RestuarentDetails s, int adapterPosition) {
             iRestuarentListActivityView.onClickedForm(s,adapterPosition);
+            Log.d(TAG, "onItemClicked: "+s.getArea());
+
         }
 
         @Override
         public void onClickItem(int position, RestuarentDetails data) {
+            Log.d(TAG, "onClickItem: "+position);
 
         }
     };
@@ -61,6 +65,7 @@ public class RestuarentListActivityPresenter extends BasePresenter<IRestuarentLi
             databaseReference.child("RestaurentList").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
+                    list = new ArrayList<>();
                    for (DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
                        RestuarentDetails restuarentDetails = dataSnapshot1.getValue(RestuarentDetails.class);
                        list.add(restuarentDetails);

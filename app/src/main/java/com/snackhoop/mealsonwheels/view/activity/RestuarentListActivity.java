@@ -16,6 +16,7 @@ import com.snackhoop.mealsonwheels.adapter.listener.IRestuarentListener;
 import com.snackhoop.mealsonwheels.model.RestuarentDetails;
 import com.snackhoop.mealsonwheels.presenter.RestuarentListActivityPresenter;
 import com.snackhoop.mealsonwheels.presenter.ipresenter.IRestuarentListActivityPresenter;
+import com.snackhoop.mealsonwheels.view.fragment.RestaurentBottomsheet;
 import com.snackhoop.mealsonwheels.view.iview.IRestuarentListActivityView;
 
 import java.util.List;
@@ -75,6 +76,8 @@ public class RestuarentListActivity extends BaseActivity<IRestuarentListActivity
     @Override
     public void onClickedForm(RestuarentDetails restuarentDetails, int adapterPosition) {
         Toast.makeText(this, ""+restuarentDetails.getArea(), Toast.LENGTH_SHORT).show();
+        RestaurentBottomsheet restaurentBottomsheet = new RestaurentBottomsheet();
+    restaurentBottomsheet.show(getSupportFragmentManager(),"detail");
     }
 
     @Override

@@ -16,5 +16,7 @@
     <string name="intent_origin_latlng">originLatLng</string>
     <string name="intent_destination_latlng">destinationLatLng</string>
     <string name="intent_bundle">data</string>
+    <string name="restaurantroot">RestaurantList</string>
     <string name="restuarent">Restuarent</string>
+    <string name="restaurantUID">restaurantUID</string>
 </resources>
