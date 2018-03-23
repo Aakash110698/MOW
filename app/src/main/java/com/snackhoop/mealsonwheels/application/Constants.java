@@ -5,4 +5,6 @@ package com.snackhoop.mealsonwheels.application;
  */
 
 public class Constants {
+    public final static int GET_ORIGIN_ACTIVITY = 101;
+    public final static int GET_DESTINATION_ACTIVITY = 102;
 }

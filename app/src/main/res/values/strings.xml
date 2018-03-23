@@ -13,4 +13,8 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="intent_origin_latlng">originLatLng</string>
+    <string name="intent_destination_latlng">destinationLatLng</string>
+    <string name="intent_bundle">data</string>
+    <string name="restuarent">Restuarent</string>
 </resources>

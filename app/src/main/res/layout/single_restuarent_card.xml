@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:id="@+id/card_restaurent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+
+                android:layout_height="95dp"
+                android:layout_weight=".3">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/background_image" />
+            </LinearLayout>
+
+            <RelativeLayout
+
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.7"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/_1234"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textview_restuarent_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stacks O'snacks"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@android:drawable/presence_busy"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textview_desc"
+                        android:text="South indian, Indian , North Indian"
+                        android:layout_below="@id/textview_restuarent_name"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/_1234"
+                    android:id="@+id/view_123"
+                    android:background="@color/lightGrey"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="1dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/view_123"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textview_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.3 star" />
+
+                    <TextView
+                        android:id="@+id/textview_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="end"
+                        android:text="VEG/NONVEG" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.v7.widget.CardView>
