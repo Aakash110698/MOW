@@ -57,7 +57,7 @@
             android:textColorHighlight="@color/cardview_light_background"
             android:shadowColor="@color/cardview_light_background"
             android:textColorHint="@color/cardview_light_background"
-            android:textColor="@color/cardview_light_background"
+            android:textColor="@color/black"
             android:textSize="20dp" />
         <android.support.design.widget.TextInputEditText
             android:id="@+id/et_otp"
